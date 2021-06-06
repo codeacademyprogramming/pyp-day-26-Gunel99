@@ -1,15 +1,20 @@
 import React from 'react';
-import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { RoomPage } from './modules/Rooms/components';
 
 function App() {
   return (
-    <BrowserRouter> 
+    <Router>
       <Switch>
-        <Route path="/room" component={RoomPage} />
-        <Redirect to="/room" />
+        <Route path="/" exact>
+          <Rooms />
+        </Route>
+        <Route path="/:roomId">
+          <Reservations />
+        </Route>
+        <Redirect to="/" />
       </Switch>
-    </BrowserRouter>
+    </Router>
   );
 }
 

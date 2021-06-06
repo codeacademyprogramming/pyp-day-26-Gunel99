@@ -1,1 +1,4 @@
-export {};
+export enum ROOM_ACTIONS {
+    GET_ROOMS = 'GET_ROOMS',
+    ADD_RESERVATION = 'ADD_RESERVATION',
+};
