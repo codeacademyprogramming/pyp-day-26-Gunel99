@@ -1,0 +1,17 @@
+.room {
+    cursor: pointer;
+    stroke: $stroke;
+    transition: fill .2s;
+    &__reserved {
+        fill: $reserved;
+        &:hover {
+            fill: $hover-reserved;
+        }
+    }
+    &__free {
+        fill: $free;
+        &:hover {
+            fill: $hover-free;
+        }
+    }
+}
